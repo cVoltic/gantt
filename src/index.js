@@ -105,6 +105,10 @@ export default class Gantt {
 
             // cache index
             task._index = i;
+            if (typeof task.custom_index === 'number') {
+                task._index = task.custom_index;
+            }
+                
 
             // invalid dates
             if (!task.start && !task.end) {
